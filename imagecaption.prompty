@@ -1,0 +1,24 @@
+---
+name: ExamplePrompt
+description: A prompt that uses context to ground an incoming question
+authors:
+  - Wesley Haakman
+model:
+  api: chat
+  configuration:
+    type: azure_openai
+    azure_endpoint: ${env:AZURE_OPENAI_ENDPOINT}
+    azure_deployment: gpt-4
+    api_version: 2024-02-15-preview
+    api_key: ${env:AZURE_OPENAI_KEY}
+  parameters:
+    max_tokens: 3000
+sample:
+  question: Frying pan, fondant, hamburger, whisk, and spatula
+---
+
+system:
+You are an assistant that based on a prompt will describe the situation. The input you receive are objects detected by a computer vision model. Describe what is happening based on the input.
+
+user:
+{{question}}

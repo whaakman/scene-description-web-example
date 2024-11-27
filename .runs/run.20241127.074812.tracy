@@ -1,0 +1,123 @@
+{
+    "runtime": "python",
+    "version": "0.1.37",
+    "trace": {
+        "name": "run",
+        "__time": {
+            "start": "2024-11-27T07:48:12.059302",
+            "end": "2024-11-27T07:48:12.107869",
+            "duration": 48
+        },
+        "signature": "__main__.SceneDescriptionAssistant.run",
+        "inputs": {
+            "question": [
+                "a computer screen with white text",
+                "a computer screen shot of a computer code",
+                "a white text on a blue background",
+                "a screen shot of a computer",
+                "a screen shot of a computer"
+            ]
+        },
+        "__frames": [
+            {
+                "name": "execute",
+                "__time": {
+                    "start": "2024-11-27T07:48:12.059302",
+                    "end": "2024-11-27T07:48:12.107869",
+                    "duration": 48
+                },
+                "signature": "prompty.execute",
+                "description": "Execute a prompty",
+                "inputs": {
+                    "prompt": "imagecaption.prompty",
+                    "configuration": {},
+                    "parameters": {},
+                    "inputs": {
+                        "question": [
+                            "a computer screen with white text",
+                            "a computer screen shot of a computer code",
+                            "a white text on a blue background",
+                            "a screen shot of a computer",
+                            "a screen shot of a computer"
+                        ]
+                    },
+                    "raw": false,
+                    "config_name": "default"
+                },
+                "__frames": [
+                    {
+                        "name": "load",
+                        "__time": {
+                            "start": "2024-11-27T07:48:12.105074",
+                            "end": "2024-11-27T07:48:12.107337",
+                            "duration": 2
+                        },
+                        "signature": "prompty.load",
+                        "description": "Load a prompty file.",
+                        "inputs": {
+                            "prompty_file": "C:\\Users\\whaak\\OneDrive\\Code\\ai-examples\\imagecaption-web\\imagecaption.prompty",
+                            "configuration": "default"
+                        },
+                        "result": {
+                            "exception": {
+                                "type": "<class 'ValueError'>",
+                                "traceback": [
+                                    "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\tracer.py\", line 149, in wrapper\n    result = func(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^\n",
+                                    "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\__init__.py\", line 240, in load\n    attributes = Prompty.normalize(attributes, p.parent)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+                                    "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\core.py\", line 288, in normalize\n    key: Prompty.normalize(value, parent)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+                                    "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\core.py\", line 288, in normalize\n    key: Prompty.normalize(value, parent)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+                                    "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\core.py\", line 288, in normalize\n    key: Prompty.normalize(value, parent)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+                                    "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\core.py\", line 273, in normalize\n    return Prompty._process_env(\n           ^^^^^^^^^^^^^^^^^^^^^\n",
+                                    "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\core.py\", line 261, in _process_env\n    raise ValueError(f\"Variable {variable} not found in environment\")\n"
+                                ],
+                                "message": "Variable AZURE_OPENAI_ENDPOINT not found in environment",
+                                "args": "('Variable AZURE_OPENAI_ENDPOINT not found in environment',)"
+                            }
+                        }
+                    }
+                ],
+                "result": {
+                    "exception": {
+                        "type": "<class 'ValueError'>",
+                        "traceback": [
+                            "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\tracer.py\", line 149, in wrapper\n    result = func(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^\n",
+                            "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\__init__.py\", line 526, in execute\n    prompt = load(path, config_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n",
+                            "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\tracer.py\", line 167, in wrapper\n    raise e\n",
+                            "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\tracer.py\", line 149, in wrapper\n    result = func(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^\n",
+                            "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\__init__.py\", line 240, in load\n    attributes = Prompty.normalize(attributes, p.parent)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+                            "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\core.py\", line 288, in normalize\n    key: Prompty.normalize(value, parent)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+                            "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\core.py\", line 288, in normalize\n    key: Prompty.normalize(value, parent)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+                            "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\core.py\", line 288, in normalize\n    key: Prompty.normalize(value, parent)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+                            "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\core.py\", line 273, in normalize\n    return Prompty._process_env(\n           ^^^^^^^^^^^^^^^^^^^^^\n",
+                            "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\core.py\", line 261, in _process_env\n    raise ValueError(f\"Variable {variable} not found in environment\")\n"
+                        ],
+                        "message": "Variable AZURE_OPENAI_ENDPOINT not found in environment",
+                        "args": "('Variable AZURE_OPENAI_ENDPOINT not found in environment',)"
+                    }
+                }
+            }
+        ],
+        "result": {
+            "exception": {
+                "type": "<class 'ValueError'>",
+                "traceback": [
+                    "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\tracer.py\", line 149, in wrapper\n    result = func(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^\n",
+                    "  File \"C:\\Users\\whaak\\OneDrive\\Code\\ai-examples\\imagecaption-web\\imagecaption.py\", line 107, in run\n    result = prompty.execute(\n             ^^^^^^^^^^^^^^^^\n",
+                    "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\tracer.py\", line 167, in wrapper\n    raise e\n",
+                    "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\tracer.py\", line 149, in wrapper\n    result = func(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^\n",
+                    "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\__init__.py\", line 526, in execute\n    prompt = load(path, config_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n",
+                    "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\tracer.py\", line 167, in wrapper\n    raise e\n",
+                    "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\tracer.py\", line 149, in wrapper\n    result = func(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^\n",
+                    "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\__init__.py\", line 240, in load\n    attributes = Prompty.normalize(attributes, p.parent)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+                    "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\core.py\", line 288, in normalize\n    key: Prompty.normalize(value, parent)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+                    "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\core.py\", line 288, in normalize\n    key: Prompty.normalize(value, parent)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+                    "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\core.py\", line 288, in normalize\n    key: Prompty.normalize(value, parent)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+                    "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\core.py\", line 273, in normalize\n    return Prompty._process_env(\n           ^^^^^^^^^^^^^^^^^^^^^\n",
+                    "  File \"C:\\Users\\whaak\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\prompty\\core.py\", line 261, in _process_env\n    raise ValueError(f\"Variable {variable} not found in environment\")\n"
+                ],
+                "message": "Variable AZURE_OPENAI_ENDPOINT not found in environment",
+                "args": "('Variable AZURE_OPENAI_ENDPOINT not found in environment',)"
+            }
+        }
+    }
+}

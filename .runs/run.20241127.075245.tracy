@@ -1,0 +1,638 @@
+{
+    "runtime": "python",
+    "version": "0.1.37",
+    "trace": {
+        "name": "run",
+        "__time": {
+            "start": "2024-11-27T07:52:39.427291",
+            "end": "2024-11-27T07:52:45.217473",
+            "duration": 5790
+        },
+        "signature": "__main__.SceneDescriptionAssistant.run",
+        "inputs": {
+            "question": [
+                "a man in a white shirt",
+                "a close up of a person's face with glasses",
+                "a green scope with a helicopter in the background",
+                "a black and gold logo",
+                "a close up of a pair of glasses",
+                "a close up of a person's lips",
+                "a man in a white shirt",
+                "a close-up of a man's face",
+                "a close up of a person's face"
+            ]
+        },
+        "__frames": [
+            {
+                "name": "execute",
+                "__time": {
+                    "start": "2024-11-27T07:52:39.427291",
+                    "end": "2024-11-27T07:52:45.217473",
+                    "duration": 5790
+                },
+                "signature": "prompty.execute",
+                "description": "Execute a prompty",
+                "inputs": {
+                    "prompt": "imagecaption.prompty",
+                    "configuration": {},
+                    "parameters": {},
+                    "inputs": {
+                        "question": [
+                            "a man in a white shirt",
+                            "a close up of a person's face with glasses",
+                            "a green scope with a helicopter in the background",
+                            "a black and gold logo",
+                            "a close up of a pair of glasses",
+                            "a close up of a person's lips",
+                            "a man in a white shirt",
+                            "a close-up of a man's face",
+                            "a close up of a person's face"
+                        ]
+                    },
+                    "raw": false,
+                    "config_name": "default"
+                },
+                "__frames": [
+                    {
+                        "name": "load",
+                        "__time": {
+                            "start": "2024-11-27T07:52:39.430323",
+                            "end": "2024-11-27T07:52:39.431864",
+                            "duration": 1
+                        },
+                        "signature": "prompty.load",
+                        "description": "Load a prompty file.",
+                        "inputs": {
+                            "prompty_file": "C:\\Users\\whaak\\OneDrive\\Code\\ai-examples\\imagecaption-web\\imagecaption.prompty",
+                            "configuration": "default"
+                        },
+                        "result": {
+                            "name": "ExamplePrompt",
+                            "description": "A prompt that uses context to ground an incoming question",
+                            "authors": [
+                                "Wesley Haakman"
+                            ],
+                            "model": {
+                                "api": "chat",
+                                "configuration": {
+                                    "type": "azure_openai",
+                                    "azure_endpoint": "https://ai-spirits-wus.openai.azure.com",
+                                    "azure_deployment": "gpt-4",
+                                    "api_version": "2024-02-15-preview",
+                                    "api_key": "********************************"
+                                },
+                                "parameters": {
+                                    "max_tokens": 3000
+                                },
+                                "response": {}
+                            },
+                            "sample": {
+                                "question": "Frying pan, fondant, hamburger, whisk, and spatula"
+                            },
+                            "template": {
+                                "type": "jinja2",
+                                "parser": "prompty"
+                            },
+                            "file": "C:/Users/whaak/OneDrive/Code/ai-examples/imagecaption-web/imagecaption.prompty",
+                            "content": "system:\nYou are an assistant that based on a prompt will describe the situation. The input you receive are objects detected by a computer vision model. Describe what is happening based on the input.\n\nuser:\n{{question}}\n"
+                        }
+                    },
+                    {
+                        "name": "prepare",
+                        "__time": {
+                            "start": "2024-11-27T07:52:39.431864",
+                            "end": "2024-11-27T07:52:39.433406",
+                            "duration": 1
+                        },
+                        "signature": "prompty.prepare",
+                        "description": "Prepare the inputs for the prompt.",
+                        "inputs": {
+                            "prompt": {
+                                "name": "ExamplePrompt",
+                                "description": "A prompt that uses context to ground an incoming question",
+                                "authors": [
+                                    "Wesley Haakman"
+                                ],
+                                "model": {
+                                    "api": "chat",
+                                    "configuration": {
+                                        "type": "azure_openai",
+                                        "azure_endpoint": "https://ai-spirits-wus.openai.azure.com",
+                                        "azure_deployment": "gpt-4",
+                                        "api_version": "2024-02-15-preview",
+                                        "api_key": "********************************"
+                                    },
+                                    "parameters": {
+                                        "max_tokens": 3000
+                                    },
+                                    "response": {}
+                                },
+                                "sample": {
+                                    "question": "Frying pan, fondant, hamburger, whisk, and spatula"
+                                },
+                                "template": {
+                                    "type": "jinja2",
+                                    "parser": "prompty"
+                                },
+                                "file": "C:/Users/whaak/OneDrive/Code/ai-examples/imagecaption-web/imagecaption.prompty",
+                                "content": "system:\nYou are an assistant that based on a prompt will describe the situation. The input you receive are objects detected by a computer vision model. Describe what is happening based on the input.\n\nuser:\n{{question}}\n"
+                            },
+                            "inputs": {
+                                "question": [
+                                    "a man in a white shirt",
+                                    "a close up of a person's face with glasses",
+                                    "a green scope with a helicopter in the background",
+                                    "a black and gold logo",
+                                    "a close up of a pair of glasses",
+                                    "a close up of a person's lips",
+                                    "a man in a white shirt",
+                                    "a close-up of a man's face",
+                                    "a close up of a person's face"
+                                ]
+                            }
+                        },
+                        "__frames": [
+                            {
+                                "name": "Jinja2Renderer",
+                                "__time": {
+                                    "start": "2024-11-27T07:52:39.431864",
+                                    "end": "2024-11-27T07:52:39.433406",
+                                    "duration": 1
+                                },
+                                "signature": "prompty.renderers.Jinja2Renderer.invoke",
+                                "inputs": {
+                                    "data": {
+                                        "question": [
+                                            "a man in a white shirt",
+                                            "a close up of a person's face with glasses",
+                                            "a green scope with a helicopter in the background",
+                                            "a black and gold logo",
+                                            "a close up of a pair of glasses",
+                                            "a close up of a person's lips",
+                                            "a man in a white shirt",
+                                            "a close-up of a man's face",
+                                            "a close up of a person's face"
+                                        ]
+                                    }
+                                },
+                                "result": "system:\nYou are an assistant that based on a prompt will describe the situation. The input you receive are objects detected by a computer vision model. Describe what is happening based on the input.\n\nuser:\n['a man in a white shirt', \"a close up of a person's face with glasses\", 'a green scope with a helicopter in the background', 'a black and gold logo', 'a close up of a pair of glasses', \"a close up of a person's lips\", 'a man in a white shirt', \"a close-up of a man's face\", \"a close up of a person's face\"]"
+                            },
+                            {
+                                "name": "PromptyChatParser",
+                                "__time": {
+                                    "start": "2024-11-27T07:52:39.433406",
+                                    "end": "2024-11-27T07:52:39.433406",
+                                    "duration": 0
+                                },
+                                "signature": "prompty.parsers.PromptyChatParser.invoke",
+                                "inputs": {
+                                    "data": "system:\nYou are an assistant that based on a prompt will describe the situation. The input you receive are objects detected by a computer vision model. Describe what is happening based on the input.\n\nuser:\n['a man in a white shirt', \"a close up of a person's face with glasses\", 'a green scope with a helicopter in the background', 'a black and gold logo', 'a close up of a pair of glasses', \"a close up of a person's lips\", 'a man in a white shirt', \"a close-up of a man's face\", \"a close up of a person's face\"]"
+                                },
+                                "result": [
+                                    {
+                                        "role": "system",
+                                        "content": "You are an assistant that based on a prompt will describe the situation. The input you receive are objects detected by a computer vision model. Describe what is happening based on the input."
+                                    },
+                                    {
+                                        "role": "user",
+                                        "content": "['a man in a white shirt', \"a close up of a person's face with glasses\", 'a green scope with a helicopter in the background', 'a black and gold logo', 'a close up of a pair of glasses', \"a close up of a person's lips\", 'a man in a white shirt', \"a close-up of a man's face\", \"a close up of a person's face\"]"
+                                    }
+                                ]
+                            }
+                        ],
+                        "result": [
+                            {
+                                "role": "system",
+                                "content": "You are an assistant that based on a prompt will describe the situation. The input you receive are objects detected by a computer vision model. Describe what is happening based on the input."
+                            },
+                            {
+                                "role": "user",
+                                "content": "['a man in a white shirt', \"a close up of a person's face with glasses\", 'a green scope with a helicopter in the background', 'a black and gold logo', 'a close up of a pair of glasses', \"a close up of a person's lips\", 'a man in a white shirt', \"a close-up of a man's face\", \"a close up of a person's face\"]"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "run",
+                        "__time": {
+                            "start": "2024-11-27T07:52:39.433406",
+                            "end": "2024-11-27T07:52:45.217473",
+                            "duration": 5784
+                        },
+                        "signature": "prompty.run",
+                        "description": "Run the prepared Prompty content against the model.",
+                        "inputs": {
+                            "prompt": {
+                                "name": "ExamplePrompt",
+                                "description": "A prompt that uses context to ground an incoming question",
+                                "authors": [
+                                    "Wesley Haakman"
+                                ],
+                                "model": {
+                                    "api": "chat",
+                                    "configuration": {
+                                        "type": "azure_openai",
+                                        "azure_endpoint": "https://ai-spirits-wus.openai.azure.com",
+                                        "azure_deployment": "gpt-4",
+                                        "api_version": "2024-02-15-preview",
+                                        "api_key": "********************************"
+                                    },
+                                    "parameters": {
+                                        "max_tokens": 3000
+                                    },
+                                    "response": {}
+                                },
+                                "sample": {
+                                    "question": "Frying pan, fondant, hamburger, whisk, and spatula"
+                                },
+                                "template": {
+                                    "type": "jinja2",
+                                    "parser": "prompty"
+                                },
+                                "file": "C:/Users/whaak/OneDrive/Code/ai-examples/imagecaption-web/imagecaption.prompty",
+                                "content": "system:\nYou are an assistant that based on a prompt will describe the situation. The input you receive are objects detected by a computer vision model. Describe what is happening based on the input.\n\nuser:\n{{question}}\n"
+                            },
+                            "content": [
+                                {
+                                    "role": "system",
+                                    "content": "You are an assistant that based on a prompt will describe the situation. The input you receive are objects detected by a computer vision model. Describe what is happening based on the input."
+                                },
+                                {
+                                    "role": "user",
+                                    "content": "['a man in a white shirt', \"a close up of a person's face with glasses\", 'a green scope with a helicopter in the background', 'a black and gold logo', 'a close up of a pair of glasses', \"a close up of a person's lips\", 'a man in a white shirt', \"a close-up of a man's face\", \"a close up of a person's face\"]"
+                                }
+                            ],
+                            "configuration": {},
+                            "parameters": {},
+                            "raw": false
+                        },
+                        "__frames": [
+                            {
+                                "name": "AzureOpenAIExecutor",
+                                "__time": {
+                                    "start": "2024-11-27T07:52:39.433406",
+                                    "end": "2024-11-27T07:52:45.217473",
+                                    "duration": 5784
+                                },
+                                "signature": "prompty.azure.executor.AzureOpenAIExecutor.invoke",
+                                "inputs": {
+                                    "data": [
+                                        {
+                                            "role": "system",
+                                            "content": "You are an assistant that based on a prompt will describe the situation. The input you receive are objects detected by a computer vision model. Describe what is happening based on the input."
+                                        },
+                                        {
+                                            "role": "user",
+                                            "content": "['a man in a white shirt', \"a close up of a person's face with glasses\", 'a green scope with a helicopter in the background', 'a black and gold logo', 'a close up of a pair of glasses', \"a close up of a person's lips\", 'a man in a white shirt', \"a close-up of a man's face\", \"a close up of a person's face\"]"
+                                        }
+                                    ]
+                                },
+                                "__frames": [
+                                    {
+                                        "name": "AzureOpenAI",
+                                        "__time": {
+                                            "start": "2024-11-27T07:52:39.433406",
+                                            "end": "2024-11-27T07:52:39.676613",
+                                            "duration": 243
+                                        },
+                                        "type": "LLM",
+                                        "signature": "AzureOpenAI.ctor",
+                                        "description": "Azure OpenAI Constructor",
+                                        "inputs": {
+                                            "azure_endpoint": "https://ai-spirits-wus.openai.azure.com",
+                                            "azure_deployment": "gpt-4",
+                                            "api_version": "2024-02-15-preview",
+                                            "api_key": "********************************"
+                                        },
+                                        "result": "<openai.lib.azure.AzureOpenAI object at 0x000001821B4B8CE0>"
+                                    },
+                                    {
+                                        "name": "create",
+                                        "__time": {
+                                            "start": "2024-11-27T07:52:39.676613",
+                                            "end": "2024-11-27T07:52:45.217473",
+                                            "duration": 5540
+                                        },
+                                        "type": "LLM",
+                                        "description": "Azure OpenAI Client",
+                                        "signature": "AzureOpenAI.chat.completions.create",
+                                        "inputs": {
+                                            "model": "gpt-4",
+                                            "messages": [
+                                                {
+                                                    "role": "system",
+                                                    "content": "You are an assistant that based on a prompt will describe the situation. The input you receive are objects detected by a computer vision model. Describe what is happening based on the input."
+                                                },
+                                                {
+                                                    "role": "user",
+                                                    "content": "['a man in a white shirt', \"a close up of a person's face with glasses\", 'a green scope with a helicopter in the background', 'a black and gold logo', 'a close up of a pair of glasses', \"a close up of a person's lips\", 'a man in a white shirt', \"a close-up of a man's face\", \"a close up of a person's face\"]"
+                                                }
+                                            ],
+                                            "max_tokens": 3000
+                                        },
+                                        "result": {
+                                            "id": "chatcmpl-AY6C3rgVXEf3zdwJ5FD2ZLGLD7my4",
+                                            "choices": [
+                                                {
+                                                    "finish_reason": "stop",
+                                                    "index": 0,
+                                                    "logprobs": null,
+                                                    "message": {
+                                                        "content": "The scene involves a man in a white shirt who appears prominently in various frames, possibly indicating that he is the main character or focus of the scene. The consistent close-ups of different facial features such as lips, glasses, and the entire face suggest detailed or dramatic emphasis on expressions or reactions, which could be part of a narrative or documentary focusing on personal stories or interviews. Additionally, the inclusion of a green scope with a helicopter in the background might indicate a subplot or scene involving surveillance, military, or a tactical scenario. The presence of a black and gold logo could suggest a specific brand or organization involved in the storyline. Overall, this appears to be a multi-layered visual narrative, possibly from a film or video production, with themes of personal storytelling mixed with broader action or strategic elements.",
+                                                        "refusal": null,
+                                                        "role": "assistant",
+                                                        "audio": null,
+                                                        "function_call": null,
+                                                        "tool_calls": null
+                                                    },
+                                                    "content_filter_results": {
+                                                        "hate": {
+                                                            "filtered": false,
+                                                            "severity": "safe"
+                                                        },
+                                                        "protected_material_code": {
+                                                            "filtered": false,
+                                                            "detected": false
+                                                        },
+                                                        "protected_material_text": {
+                                                            "filtered": false,
+                                                            "detected": false
+                                                        },
+                                                        "self_harm": {
+                                                            "filtered": false,
+                                                            "severity": "safe"
+                                                        },
+                                                        "sexual": {
+                                                            "filtered": false,
+                                                            "severity": "safe"
+                                                        },
+                                                        "violence": {
+                                                            "filtered": false,
+                                                            "severity": "safe"
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "created": 1732690323,
+                                            "model": "gpt-4-turbo-2024-04-09",
+                                            "object": "chat.completion",
+                                            "service_tier": null,
+                                            "system_fingerprint": "fp_5b26d85e12",
+                                            "usage": {
+                                                "completion_tokens": 158,
+                                                "prompt_tokens": 133,
+                                                "total_tokens": 291,
+                                                "completion_tokens_details": null,
+                                                "prompt_tokens_details": null
+                                            },
+                                            "prompt_filter_results": [
+                                                {
+                                                    "prompt_index": 0,
+                                                    "content_filter_results": {
+                                                        "hate": {
+                                                            "filtered": false,
+                                                            "severity": "safe"
+                                                        },
+                                                        "jailbreak": {
+                                                            "filtered": false,
+                                                            "detected": false
+                                                        },
+                                                        "self_harm": {
+                                                            "filtered": false,
+                                                            "severity": "safe"
+                                                        },
+                                                        "sexual": {
+                                                            "filtered": false,
+                                                            "severity": "safe"
+                                                        },
+                                                        "violence": {
+                                                            "filtered": false,
+                                                            "severity": "safe"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "__usage": {
+                                            "completion_tokens": 158,
+                                            "prompt_tokens": 133,
+                                            "total_tokens": 291
+                                        }
+                                    }
+                                ],
+                                "result": {
+                                    "id": "chatcmpl-AY6C3rgVXEf3zdwJ5FD2ZLGLD7my4",
+                                    "choices": [
+                                        {
+                                            "finish_reason": "stop",
+                                            "index": 0,
+                                            "logprobs": "None",
+                                            "message": {
+                                                "content": "The scene involves a man in a white shirt who appears prominently in various frames, possibly indicating that he is the main character or focus of the scene. The consistent close-ups of different facial features such as lips, glasses, and the entire face suggest detailed or dramatic emphasis on expressions or reactions, which could be part of a narrative or documentary focusing on personal stories or interviews. Additionally, the inclusion of a green scope with a helicopter in the background might indicate a subplot or scene involving surveillance, military, or a tactical scenario. The presence of a black and gold logo could suggest a specific brand or organization involved in the storyline. Overall, this appears to be a multi-layered visual narrative, possibly from a film or video production, with themes of personal storytelling mixed with broader action or strategic elements.",
+                                                "refusal": "None",
+                                                "role": "assistant",
+                                                "audio": "None",
+                                                "function_call": "None",
+                                                "tool_calls": "None"
+                                            },
+                                            "content_filter_results": {
+                                                "hate": {
+                                                    "filtered": false,
+                                                    "severity": "safe"
+                                                },
+                                                "protected_material_code": {
+                                                    "filtered": false,
+                                                    "detected": false
+                                                },
+                                                "protected_material_text": {
+                                                    "filtered": false,
+                                                    "detected": false
+                                                },
+                                                "self_harm": {
+                                                    "filtered": false,
+                                                    "severity": "safe"
+                                                },
+                                                "sexual": {
+                                                    "filtered": false,
+                                                    "severity": "safe"
+                                                },
+                                                "violence": {
+                                                    "filtered": false,
+                                                    "severity": "safe"
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "created": 1732690323,
+                                    "model": "gpt-4-turbo-2024-04-09",
+                                    "object": "chat.completion",
+                                    "service_tier": "None",
+                                    "system_fingerprint": "fp_5b26d85e12",
+                                    "usage": {
+                                        "completion_tokens": 158,
+                                        "prompt_tokens": 133,
+                                        "total_tokens": 291,
+                                        "completion_tokens_details": "****",
+                                        "prompt_tokens_details": "****"
+                                    },
+                                    "prompt_filter_results": [
+                                        {
+                                            "prompt_index": 0,
+                                            "content_filter_results": {
+                                                "hate": {
+                                                    "filtered": false,
+                                                    "severity": "safe"
+                                                },
+                                                "jailbreak": {
+                                                    "filtered": false,
+                                                    "detected": false
+                                                },
+                                                "self_harm": {
+                                                    "filtered": false,
+                                                    "severity": "safe"
+                                                },
+                                                "sexual": {
+                                                    "filtered": false,
+                                                    "severity": "safe"
+                                                },
+                                                "violence": {
+                                                    "filtered": false,
+                                                    "severity": "safe"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                "__usage": {
+                                    "completion_tokens": 316,
+                                    "prompt_tokens": 266,
+                                    "total_tokens": 582,
+                                    "completion_tokens_details": "****",
+                                    "prompt_tokens_details": "****"
+                                }
+                            },
+                            {
+                                "name": "AzureOpenAIProcessor",
+                                "__time": {
+                                    "start": "2024-11-27T07:52:45.217473",
+                                    "end": "2024-11-27T07:52:45.217473",
+                                    "duration": 0
+                                },
+                                "signature": "prompty.azure.processor.AzureOpenAIProcessor.invoke",
+                                "inputs": {
+                                    "data": {
+                                        "id": "chatcmpl-AY6C3rgVXEf3zdwJ5FD2ZLGLD7my4",
+                                        "choices": [
+                                            {
+                                                "finish_reason": "stop",
+                                                "index": 0,
+                                                "logprobs": "None",
+                                                "message": {
+                                                    "content": "The scene involves a man in a white shirt who appears prominently in various frames, possibly indicating that he is the main character or focus of the scene. The consistent close-ups of different facial features such as lips, glasses, and the entire face suggest detailed or dramatic emphasis on expressions or reactions, which could be part of a narrative or documentary focusing on personal stories or interviews. Additionally, the inclusion of a green scope with a helicopter in the background might indicate a subplot or scene involving surveillance, military, or a tactical scenario. The presence of a black and gold logo could suggest a specific brand or organization involved in the storyline. Overall, this appears to be a multi-layered visual narrative, possibly from a film or video production, with themes of personal storytelling mixed with broader action or strategic elements.",
+                                                    "refusal": "None",
+                                                    "role": "assistant",
+                                                    "audio": "None",
+                                                    "function_call": "None",
+                                                    "tool_calls": "None"
+                                                },
+                                                "content_filter_results": {
+                                                    "hate": {
+                                                        "filtered": false,
+                                                        "severity": "safe"
+                                                    },
+                                                    "protected_material_code": {
+                                                        "filtered": false,
+                                                        "detected": false
+                                                    },
+                                                    "protected_material_text": {
+                                                        "filtered": false,
+                                                        "detected": false
+                                                    },
+                                                    "self_harm": {
+                                                        "filtered": false,
+                                                        "severity": "safe"
+                                                    },
+                                                    "sexual": {
+                                                        "filtered": false,
+                                                        "severity": "safe"
+                                                    },
+                                                    "violence": {
+                                                        "filtered": false,
+                                                        "severity": "safe"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "created": 1732690323,
+                                        "model": "gpt-4-turbo-2024-04-09",
+                                        "object": "chat.completion",
+                                        "service_tier": "None",
+                                        "system_fingerprint": "fp_5b26d85e12",
+                                        "usage": {
+                                            "completion_tokens": 158,
+                                            "prompt_tokens": 133,
+                                            "total_tokens": 291,
+                                            "completion_tokens_details": "****",
+                                            "prompt_tokens_details": "****"
+                                        },
+                                        "prompt_filter_results": [
+                                            {
+                                                "prompt_index": 0,
+                                                "content_filter_results": {
+                                                    "hate": {
+                                                        "filtered": false,
+                                                        "severity": "safe"
+                                                    },
+                                                    "jailbreak": {
+                                                        "filtered": false,
+                                                        "detected": false
+                                                    },
+                                                    "self_harm": {
+                                                        "filtered": false,
+                                                        "severity": "safe"
+                                                    },
+                                                    "sexual": {
+                                                        "filtered": false,
+                                                        "severity": "safe"
+                                                    },
+                                                    "violence": {
+                                                        "filtered": false,
+                                                        "severity": "safe"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                "result": "The scene involves a man in a white shirt who appears prominently in various frames, possibly indicating that he is the main character or focus of the scene. The consistent close-ups of different facial features such as lips, glasses, and the entire face suggest detailed or dramatic emphasis on expressions or reactions, which could be part of a narrative or documentary focusing on personal stories or interviews. Additionally, the inclusion of a green scope with a helicopter in the background might indicate a subplot or scene involving surveillance, military, or a tactical scenario. The presence of a black and gold logo could suggest a specific brand or organization involved in the storyline. Overall, this appears to be a multi-layered visual narrative, possibly from a film or video production, with themes of personal storytelling mixed with broader action or strategic elements."
+                            }
+                        ],
+                        "result": "The scene involves a man in a white shirt who appears prominently in various frames, possibly indicating that he is the main character or focus of the scene. The consistent close-ups of different facial features such as lips, glasses, and the entire face suggest detailed or dramatic emphasis on expressions or reactions, which could be part of a narrative or documentary focusing on personal stories or interviews. Additionally, the inclusion of a green scope with a helicopter in the background might indicate a subplot or scene involving surveillance, military, or a tactical scenario. The presence of a black and gold logo could suggest a specific brand or organization involved in the storyline. Overall, this appears to be a multi-layered visual narrative, possibly from a film or video production, with themes of personal storytelling mixed with broader action or strategic elements.",
+                        "__usage": {
+                            "completion_tokens": 316,
+                            "prompt_tokens": 266,
+                            "total_tokens": 582,
+                            "completion_tokens_details": "****",
+                            "prompt_tokens_details": "****"
+                        }
+                    }
+                ],
+                "result": "The scene involves a man in a white shirt who appears prominently in various frames, possibly indicating that he is the main character or focus of the scene. The consistent close-ups of different facial features such as lips, glasses, and the entire face suggest detailed or dramatic emphasis on expressions or reactions, which could be part of a narrative or documentary focusing on personal stories or interviews. Additionally, the inclusion of a green scope with a helicopter in the background might indicate a subplot or scene involving surveillance, military, or a tactical scenario. The presence of a black and gold logo could suggest a specific brand or organization involved in the storyline. Overall, this appears to be a multi-layered visual narrative, possibly from a film or video production, with themes of personal storytelling mixed with broader action or strategic elements.",
+                "__usage": {
+                    "completion_tokens": 316,
+                    "prompt_tokens": 266,
+                    "total_tokens": 582,
+                    "completion_tokens_details": "****",
+                    "prompt_tokens_details": "****"
+                }
+            }
+        ],
+        "result": "The scene involves a man in a white shirt who appears prominently in various frames, possibly indicating that he is the main character or focus of the scene. The consistent close-ups of different facial features such as lips, glasses, and the entire face suggest detailed or dramatic emphasis on expressions or reactions, which could be part of a narrative or documentary focusing on personal stories or interviews. Additionally, the inclusion of a green scope with a helicopter in the background might indicate a subplot or scene involving surveillance, military, or a tactical scenario. The presence of a black and gold logo could suggest a specific brand or organization involved in the storyline. Overall, this appears to be a multi-layered visual narrative, possibly from a film or video production, with themes of personal storytelling mixed with broader action or strategic elements.",
+        "__usage": {
+            "completion_tokens": 316,
+            "prompt_tokens": 266,
+            "total_tokens": 582,
+            "completion_tokens_details": "****",
+            "prompt_tokens_details": "****"
+        }
+    }
+}
